@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/logo.png.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Background overlay -->
+  <div class="hero-overlay"></div>
+
+  <!-- Centered Diamond Logo -->
+  <div class="logo-container">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="90" height="90">
+      <polygon points="32,4 60,24 50,60 14,60 4,24" fill="#69DA0D" stroke="#ffffff" stroke-width="2"/>
+      <line x1="32" y1="4" x2="32" y2="60" stroke="#ffffff" stroke-width="1"/>
+      <line x1="4" y1="24" x2="32" y2="60" stroke="#ffffff" stroke-width="1"/>
+      <line x1="60" y1="24" x2="32" y2="60" stroke="#ffffff" stroke-width="1"/>
+    </svg>
+  </div>
+
+  <!-- Login/Register Cards -->
+  <main class="auth-container">
+    <!-- Login Card -->
+    <div class="auth-card" id="login-card">
+      <h2>Login</h2>
+      <form id="login-form">
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <button type="button" onclick="goToMain()">Login</button>
+      </form>
+      <p>Don't have an account? <span class="switch" onclick="toggleForms()">Sign Up</span></p>
+    </div>
+
+    <!-- Register Card -->
+    <div class="auth-card hidden" id="register-card">
+      <h2>Register</h2>
+      <form id="register-form">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="button" onclick="goToMain()">Sign Up</button>
+      </form>
+      <p>Already have an account? <span class="switch" onclick="toggleForms()">Login</span></p>
+    </div>
+  </main>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
+
