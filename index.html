@@ -1,14 +1,10 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-
   <meta charset="UTF-8">
   <title>LuxuryLife</title>
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/logo.png">
-
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/header.css">
   <link rel="stylesheet" href="assets/css/slider.css">
@@ -16,15 +12,11 @@
   <link rel="stylesheet" href="assets/css/footer.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
   <link rel="stylesheet" href="assets/css/cart.css">
-  
 </head>
 
 <body>
- 
   <header class="site-header">
-
     <div class="header-inner">
-
       <a href="index.html" class="logo">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="40" height="40">
           <polygon points="32,4 60,24 50,60 14,60 4,24" fill="#69DA0D" stroke="#ffffff" stroke-width="2"/>
@@ -48,7 +40,6 @@
           <span id="cart-count">0</span>
           <a href="cart.html">Cart</a>
         </div>
-
         <div class="cart-dropdown" id="cart-dropdown">
           <div id="dropdown-items"></div>
           <p id="dropdown-total"></p>
@@ -58,15 +49,14 @@
     </div>
 
     <button id="logout-btn">Logout</button>
-
   </header>
-  
+
+  <div id="react-root" style="text-align:center; margin:20px 0;"></div>
+
   <div class="hero-overlay"></div>
 
   <section class="products-section">
-
     <h2 class="section-title">Our Products</h2>
-
     <div class="products">
       <div class="card"><a href="products/Woman_Dress_Heart.html"><img src="assets/images/cloth1.jpg" alt="Product 1"></a><h3>Woman Dress Heart</h3><p>$100.00</p><button>Add to Cart</button></div>
       <div class="card"><a href="products/Woman_Dress_Pink.html"><img src="assets/images/cloth2.avif" alt="Product 2"></a><h3>Woman Dress Pink</h3><p>$120.00</p><button>Add to Cart</button></div>
@@ -78,14 +68,10 @@
       <div class="card"><a href="products/Men_Jacket_Blue.html"><img src="assets/images/clM2.jpg" alt="Product 8"></a><h3>Man Jacket Blue</h3><p>$150.00</p><button>Add to Cart</button></div>
       <div class="card"><a href="products/Kid_Hat.html"><img src="assets/images/kid_hat.webp" alt="Hat"></a><h3>Hat</h3><p>$129</p><button>Add to Cart</button></div>
     </div>
-
   </section>
 
-
   <section class="slideshow-section">
-
     <h2 class="section-title">Clothes Collection</h2>
-
     <div class="slideshow-container">
       <div class="slide fade"><img src="assets/images/slide1.webp" alt="Slide 1"></div>
       <div class="slide fade"><img src="assets/images/slide2.jpg" alt="Slide 2"></div>
@@ -99,15 +85,11 @@
         <span class="dot" data-slide="2"></span>
         <span class="dot" data-slide="3"></span>
       </div>
-
     </div>
-
   </section>
 
   <section class="map-section">
-
     <h2 class="section-title">Our Location</h2>
-
     <iframe
       src="https://www.google.com/maps?q=123+Main+Street,+New+York,+NY,+USA&output=embed"
       width="100%"
@@ -117,19 +99,15 @@
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade">
     </iframe>
-
   </section>
 
   <section class="reviews-section">
-
     <h2 class="section-title">Customer Reviews</h2>
-
     <div class="reviews-container">
       <div class="review-card"><p>"Great quality products and fast delivery!"</p><span>- John Doe</span></div>
       <div class="review-card"><p>"Amazing online store, highly recommend."</p><span>- Sarah Smith</span></div>
       <div class="review-card"><p>"Customer support was very helpful."</p><span>- Mike Johnson</span></div>
     </div>
-
   </section>
 
   <footer>
@@ -169,10 +147,37 @@
     </div>
     <p style="text-align:center; padding:15px; margin:0; border-top:1px solid #333;">© 2026 LuxuryLife. All rights reserved.</p>
   </footer>
-  
+
   <script src="assets/js/slider.js"></script>
   <script src="assets/js/background.js"></script>
   <script src="assets/js/cart.js"></script>
   <script src="assets/js/logout.js"></script>
+
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <script>
+    function WelcomeMessage() {
+      return React.createElement(
+        "p",
+        {
+          style: {
+            fontSize: "16px",
+            color: "#69DA0D",
+            fontWeight: "500",
+            margin: "0"
+          }
+        },
+        "Welcome to LuxuryLife — Your Online Fashion Destination!"
+      );
+    }
+
+    ReactDOM.render(
+      React.createElement(WelcomeMessage),
+      document.getElementById("react-root")
+    );
+  </script>
+
 </body>
 </html>
+
